@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="helmetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="60%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="antGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="40%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="wrenchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Ring Badge -->
+  <circle cx="256" cy="256" r="240" fill="#0f172a" stroke="#0284c7" stroke-width="12"/>
+  <circle cx="256" cy="256" r="226" fill="none" stroke="#38bdf8" stroke-width="16"/>
+  <circle cx="256" cy="256" r="206" fill="#f8fafc"/>
+
+  <!-- Ant Body Segments in background -->
+  <!-- Thorax & Abdomen -->
+  <ellipse cx="256" cy="380" rx="76" ry="60" fill="url(#antGrad)" stroke="#0f172a" stroke-width="10"/>
+  <ellipse cx="256" cy="325" rx="55" ry="46" fill="url(#antGrad)" stroke="#0f172a" stroke-width="9"/>
+
+  <!-- Ant Legs -->
+  <path d="M190 365 C 160 380 130 410 140 435" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M322 365 C 352 380 382 410 372 435" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Antennae extending through helmet -->
+  <path d="M210 150 Q 180 80 135 60" fill="none" stroke="#0f172a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="130" cy="58" r="14" fill="#0284c7" stroke="#0f172a" stroke-width="8"/>
+
+  <path d="M302 150 Q 332 80 377 60" fill="none" stroke="#0f172a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="382" cy="58" r="14" fill="#0284c7" stroke="#0f172a" stroke-width="8"/>
+
+  <!-- Ant Head -->
+  <ellipse cx="256" cy="245" rx="84" ry="72" fill="url(#antGrad)" stroke="#0f172a" stroke-width="10"/>
+
+  <!-- Safety Helmet / Hardhat -->
+  <path d="M165 185 C 170 115 342 115 347 185 Z" fill="url(#helmetGrad)" stroke="#0f172a" stroke-width="10"/>
+  <path d="M145 185 Q 256 168 367 185 Q 256 198 145 185 Z" fill="#0369a1" stroke="#0f172a" stroke-width="10"/>
+  <!-- Helmet Center Ridge & Highlights -->
+  <path d="M250 120 C 250 140 252 170 252 180" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
+  <path d="M195 138 C 215 125 240 122 250 122" stroke="#bae6fd" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Big Animated Eyes -->
+  <!-- Left Eye -->
+  <ellipse cx="220" cy="230" rx="26" ry="32" fill="#ffffff" stroke="#0f172a" stroke-width="8"/>
+  <ellipse cx="226" cy="232" rx="14" ry="18" fill="#0f172a"/>
+  <circle cx="230" cy="225" r="6" fill="#ffffff"/>
+
+  <!-- Right Eye -->
+  <ellipse cx="292" cy="230" rx="26" ry="32" fill="#ffffff" stroke="#0f172a" stroke-width="8"/>
+  <ellipse cx="286" cy="232" rx="14" ry="18" fill="#0f172a"/>
+  <circle cx="282" cy="225" r="6" fill="#ffffff"/>
+
+  <!-- Ant Snout / Cheeks / Happy Smile -->
+  <path d="M210 265 Q 256 310 302 265" fill="#0f172a" stroke="#0f172a" stroke-width="6"/>
+  <!-- Tongue -->
+  <path d="M232 284 Q 256 312 280 284 Q 256 298 232 284" fill="#ef4444"/>
+
+  <!-- Left Arm: Holding Wrench -->
+  <!-- Mechanic's Wrench -->
+  <g transform="rotate(38 310 300)">
+    <rect x="300" y="190" width="22" height="150" rx="6" fill="url(#wrenchGrad)" stroke="#0f172a" stroke-width="8"/>
+    <!-- Wrench Head -->
+    <path d="M290 190 C 280 160 342 160 332 190 L 318 190 L 318 202 L 304 202 L 304 190 Z" fill="url(#wrenchGrad)" stroke="#0f172a" stroke-width="8"/>
+    <circle cx="311" cy="330" r="7" fill="#f8fafc" stroke="#0f172a" stroke-width="6"/>
+  </g>
+  <!-- Hand gripping wrench -->
+  <ellipse cx="316" cy="285" rx="18" ry="16" fill="url(#antGrad)" stroke="#0f172a" stroke-width="8"/>
+
+  <!-- Right Arm: Thumbs Up 👍 -->
+  <path d="M195 295 C 160 285 135 270 120 250" fill="none" stroke="#0ea5e9" stroke-width="20" stroke-linecap="round"/>
+  <path d="M195 295 C 160 285 135 270 120 250" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+  <!-- Gloved Thumb Up Hand -->
+  <path d="M125 240 C 120 220 125 195 135 195 C 145 195 145 220 145 235 L 155 245 C 158 255 148 268 135 268 C 125 268 115 255 125 240 Z" fill="url(#antGrad)" stroke="#0f172a" stroke-width="8"/>
+
+</svg>

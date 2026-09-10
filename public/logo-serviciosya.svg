@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ringGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="helmetGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="60%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="antGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="40%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="wrenchGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="textGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Mascot Center Group -->
+  <g transform="translate(100, 0)">
+    <!-- Outer Ring Badge -->
+    <circle cx="250" cy="200" r="165" fill="#0f172a" stroke="#0284c7" stroke-width="8"/>
+    <circle cx="250" cy="200" r="155" fill="none" stroke="#38bdf8" stroke-width="12"/>
+    <circle cx="250" cy="200" r="142" fill="#f8fafc"/>
+
+    <!-- Ant Body -->
+    <ellipse cx="250" cy="290" rx="55" ry="42" fill="url(#antGradL)" stroke="#0f172a" stroke-width="8"/>
+    <ellipse cx="250" cy="250" rx="40" ry="32" fill="url(#antGradL)" stroke="#0f172a" stroke-width="7"/>
+
+    <!-- Legs -->
+    <path d="M205 280 C 180 290 160 315 168 335" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+    <path d="M295 280 C 320 290 340 315 332 335" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Antennae -->
+    <path d="M218 120 Q 192 65 158 50" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="154" cy="48" r="11" fill="#0284c7" stroke="#0f172a" stroke-width="6"/>
+
+    <path d="M282 120 Q 308 65 342 50" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="346" cy="48" r="11" fill="#0284c7" stroke="#0f172a" stroke-width="6"/>
+
+    <!-- Head -->
+    <ellipse cx="250" cy="190" rx="64" ry="54" fill="url(#antGradL)" stroke="#0f172a" stroke-width="8"/>
+
+    <!-- Safety Helmet -->
+    <path d="M182 145 C 186 92 314 92 318 145 Z" fill="url(#helmetGradL)" stroke="#0f172a" stroke-width="8"/>
+    <path d="M166 145 Q 250 132 334 145 Q 250 156 166 145 Z" fill="#0369a1" stroke="#0f172a" stroke-width="8"/>
+    <path d="M246 95 C 246 110 248 132 248 140" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Eyes -->
+    <ellipse cx="224" cy="178" rx="20" ry="24" fill="#ffffff" stroke="#0f172a" stroke-width="6"/>
+    <ellipse cx="228" cy="180" rx="11" ry="14" fill="#0f172a"/>
+    <circle cx="231" cy="174" r="5" fill="#ffffff"/>
+
+    <ellipse cx="276" cy="178" rx="20" ry="24" fill="#ffffff" stroke="#0f172a" stroke-width="6"/>
+    <ellipse cx="272" cy="180" rx="11" ry="14" fill="#0f172a"/>
+    <circle cx="269" cy="174" r="5" fill="#ffffff"/>
+
+    <!-- Smile & Tongue -->
+    <path d="M216 206 Q 250 240 284 206" fill="#0f172a" stroke="#0f172a" stroke-width="5"/>
+    <path d="M232 220 Q 250 242 268 220 Q 250 231 232 220" fill="#ef4444"/>
+
+    <!-- Wrench -->
+    <g transform="rotate(36 295 230)">
+      <rect x="286" y="145" width="18" height="120" rx="5" fill="url(#wrenchGradL)" stroke="#0f172a" stroke-width="6"/>
+      <path d="M278 145 C 270 122 320 122 312 145 L 301 145 L 301 155 L 290 155 L 290 145 Z" fill="url(#wrenchGradL)" stroke="#0f172a" stroke-width="6"/>
+    </g>
+    <!-- Hand holding wrench -->
+    <circle cx="300" cy="220" r="14" fill="url(#antGradL)" stroke="#0f172a" stroke-width="6"/>
+
+    <!-- Thumbs Up -->
+    <path d="M202 230 C 175 220 155 205 145 190" fill="none" stroke="#0ea5e9" stroke-width="16" stroke-linecap="round"/>
+    <path d="M202 230 C 175 220 155 205 145 190" fill="none" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M148 185 C 144 170 148 150 156 150 C 164 150 164 170 164 180 L 172 188 C 174 196 166 206 156 206 C 148 206 140 196 148 185 Z" fill="url(#antGradL)" stroke="#0f172a" stroke-width="6"/>
+  </g>
+
+  <!-- Stylized Banner & Typography "ServiciosYA" -->
+  <g transform="translate(0, 310)" filter="url(#logoShadow)">
+    <!-- Underline Swoosh -->
+    <path d="M 120 135 Q 350 170 580 125 Q 350 145 120 135 Z" fill="#0ea5e9" stroke="#0f172a" stroke-width="4"/>
+
+    <!-- Text Background / Border Path -->
+    <text x="50%" y="115" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="78" letter-spacing="-1">
+      <tspan fill="url(#textGradL)" stroke="#0f172a" stroke-width="12" paint-order="stroke fill">Servicios</tspan>
+      <tspan dx="4" fill="#ffffff" stroke="#0f172a" stroke-width="12" paint-order="stroke fill">YA</tspan>
+    </text>
+  </g>
+</svg>
