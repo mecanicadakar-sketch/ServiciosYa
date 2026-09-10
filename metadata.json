@@ -1,0 +1,6 @@
+{
+  "name": "ServiciosYa",
+  "description": "Directorio inteligente de oficios y servicios para todo el Paraguay con mapa interactivo por departamentos, contacto directo por WhatsApp y profesionales destacados con estrella amarilla.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

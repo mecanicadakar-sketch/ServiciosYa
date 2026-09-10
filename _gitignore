@@ -1,0 +1,11 @@
+# Archivo de exclusión de git con guion bajo
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+_env*
+!.env.example
+!_env.example

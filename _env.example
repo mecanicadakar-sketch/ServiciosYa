@@ -1,0 +1,7 @@
+# Variables de entorno de la aplicación (Nombre seguro con guion bajo: _env)
+# GEMINI_API_KEY: Requerido para llamadas a la API de Gemini AI.
+# Inyectado automáticamente en el servidor seguro.
+GEMINI_API_KEY="MY_GEMINI_API_KEY"
+
+# APP_URL: URL base segura de la aplicación
+APP_URL="MY_APP_URL"
