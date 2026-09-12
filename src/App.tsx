@@ -1260,8 +1260,8 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2.5 mb-3">
-                <div className="w-8 h-8 rounded-full overflow-hidden border border-sky-400/60 bg-slate-950 flex items-center justify-center shrink-0">
-                  <img src="/favicon.svg" alt="ServiciosYa" className="w-full h-full object-contain" />
+                <div className="w-14 h-14 flex items-center justify-center shrink-0">
+                  <img src="/logo-hormiga.png" alt="ServiciosYa" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <span className="text-lg font-black text-white">Servicios<span className="text-sky-400 italic">YA</span></span>
               </div>
