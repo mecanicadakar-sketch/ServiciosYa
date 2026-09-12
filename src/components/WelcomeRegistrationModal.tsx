@@ -91,8 +91,8 @@ export const WelcomeRegistrationModal: React.FC<WelcomeRegistrationModalProps> =
         <div className="p-5 sm:p-7 overflow-y-auto space-y-5">
           {/* Header */}
           <div className="text-center max-w-lg mx-auto">
-            <div className="mx-auto w-16 h-16 rounded-full overflow-hidden border-2 border-sky-500 shadow-xs mb-3 bg-slate-900 flex items-center justify-center">
-              <img src="/favicon.svg" alt="ServiciosYa Mascota" className="w-full h-full object-contain" />
+            <div className="mx-auto w-24 h-24 mb-3 flex items-center justify-center">
+              <img src="/logo-hormiga.png" alt="ServiciosYa Mascota" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold mb-2 shadow-2xs">
               <span className="text-sm">🇵🇾</span>
