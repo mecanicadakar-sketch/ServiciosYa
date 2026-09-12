@@ -245,6 +245,24 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
     }
   }, [initialWantsSponsor, initialSponsorType]);
 
+  // Ensure email and password fields always start completely blank and prevent browser autofill of admin credentials
+  useEffect(() => {
+    setRegEmail('');
+    setRegPassword('');
+    setLoginEmail('');
+    setLoginPassword('');
+
+    // Clear any aggressive browser autofill of saved admin credentials
+    const timer = setTimeout(() => {
+      setRegEmail((prev) => (prev === 'serviciosyaparaguay@gmail.com' ? '' : prev));
+      setRegPassword((prev) => (prev === 'Servi270985#' ? '' : prev));
+      setLoginEmail((prev) => (prev === 'serviciosyaparaguay@gmail.com' ? '' : prev));
+      setLoginPassword((prev) => (prev === 'Servi270985#' ? '' : prev));
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [authMode]);
+
   // Work Status Toggle (Busy / Available)
   const [workStatus, setWorkStatus] = useState<'available' | 'busy'>(
     myProfessional?.workStatus || 'available'
@@ -477,7 +495,11 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
 
         {/* REGISTER FORM */}
         {authMode === 'register' && (
-          <form onSubmit={handleRegister} className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <form onSubmit={handleRegister} autoComplete="off" className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+            {/* Inputs ocultos ficticios para desviar el autocompletado agresivo de credenciales del navegador */}
+            <input type="text" name="fake_username_prevent_autofill" className="sr-only hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+            <input type="password" name="fake_password_prevent_autofill" className="sr-only hidden" tabIndex={-1} autoComplete="new-password" aria-hidden="true" />
+
             <div className="border-b border-slate-100 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h2 className="text-lg font-bold text-slate-900">
@@ -551,11 +573,15 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
                 <label className="block text-xs font-semibold text-slate-700 mb-1">Correo Electrónico (Para tu cuenta) *</label>
                 <input
                   id="reg-input-email"
+                  name="service_provider_reg_email"
                   type="email"
                   required
                   value={regEmail}
                   onChange={(e) => setRegEmail(e.target.value)}
                   placeholder="nombre@gmail.com"
+                  autoComplete="off"
+                  data-lpignore="true"
+                  data-form-type="other"
                   className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-100/90 focus:bg-white text-slate-900 text-xs rounded-lg border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-hidden font-medium transition-all"
                 />
               </div>
@@ -564,11 +590,15 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
                 <label className="block text-xs font-semibold text-slate-700 mb-1">Contraseña *</label>
                 <input
                   id="reg-input-password"
+                  name="service_provider_reg_password"
                   type="password"
                   required
                   value={regPassword}
                   onChange={(e) => setRegPassword(e.target.value)}
                   placeholder="Crea una contraseña segura"
+                  autoComplete="new-password"
+                  data-lpignore="true"
+                  data-form-type="other"
                   className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-100/90 focus:bg-white text-slate-900 text-xs rounded-lg border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-hidden font-medium transition-all"
                 />
               </div>
@@ -995,7 +1025,11 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
 
         {/* LOGIN FORM */}
         {authMode === 'login' && (
-          <form onSubmit={handleLogin} className="max-w-md mx-auto bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <form onSubmit={handleLogin} autoComplete="off" className="max-w-md mx-auto bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+            {/* Inputs ocultos ficticios para desviar el autocompletado de contraseñas guardadas del navegador */}
+            <input type="text" name="fake_login_user_prevent" className="sr-only hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+            <input type="password" name="fake_login_pass_prevent" className="sr-only hidden" tabIndex={-1} autoComplete="new-password" aria-hidden="true" />
+
             <div className="text-center pb-2">
               <h2 className="text-lg font-bold text-slate-900">
                 Iniciar Sesión Profesional
@@ -1015,11 +1049,15 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
               <label className="block text-xs font-semibold text-slate-700 mb-1">Correo Electrónico</label>
               <input
                 id="login-input-email"
+                name="service_provider_account_email"
                 type="email"
                 required
                 value={loginEmail}
                 onChange={(e) => setLoginEmail(e.target.value)}
                 placeholder="nombre@gmail.com"
+                autoComplete="off"
+                data-lpignore="true"
+                data-form-type="other"
                 className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-100/90 focus:bg-white text-xs rounded-lg border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-hidden font-medium text-slate-900 transition-all"
               />
             </div>
@@ -1028,11 +1066,15 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
               <label className="block text-xs font-semibold text-slate-700 mb-1">Contraseña</label>
               <input
                 id="login-input-password"
+                name="service_provider_account_password"
                 type="password"
                 required
                 value={loginPassword}
                 onChange={(e) => setLoginPassword(e.target.value)}
                 placeholder="••••••••"
+                autoComplete="new-password"
+                data-lpignore="true"
+                data-form-type="other"
                 className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-100/90 focus:bg-white text-xs rounded-lg border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-hidden font-medium text-slate-900 transition-all"
               />
             </div>
