@@ -54,31 +54,32 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between min-h-[82px] sm:min-h-[96px] md:min-h-[104px] py-1.5 sm:py-2">
           
           {/* Brand Logo - Official Hormiguita Mascot */}
           <div 
             id="brand-logo"
             onClick={() => { navigateTo('directory'); setMobileMenuOpen(false); }}
-            className="flex items-center gap-2.5 cursor-pointer group select-none shrink-0"
+            className="flex items-center gap-2.5 sm:gap-3.5 cursor-pointer group select-none shrink-0"
           >
-            <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-sky-500 shadow-xs group-hover:scale-105 transition-transform flex items-center justify-center bg-slate-900 shrink-0">
+            <div className="relative w-[72px] h-[72px] sm:w-[88px] sm:h-[88px] md:w-[96px] md:h-[96px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
               <img 
-                src="/favicon.svg" 
+                src="/logo-hormiga.png" 
                 alt="ServiciosYa Logo Mascot" 
                 className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
               />
             </div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl font-black tracking-tight text-slate-900">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 leading-none">
                   Servicios<span className="text-sky-600 font-black italic">YA</span>
                 </span>
-                <span className="text-sky-700 bg-sky-50 text-[10px] font-bold px-1.5 py-0.5 rounded border border-sky-200 uppercase tracking-tight hidden sm:inline-block">
+                <span className="text-sky-700 bg-sky-50 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded border border-sky-200 uppercase tracking-tight hidden sm:inline-block">
                   Paraguay
                 </span>
               </div>
-              <p className="text-[10px] text-slate-500 font-medium -mt-0.5 hidden lg:block">
+              <p className="text-[11px] sm:text-xs text-slate-500 font-semibold mt-1 hidden lg:block tracking-wide">
                 Directorio Inteligente de Oficios
               </p>
             </div>
