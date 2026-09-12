@@ -296,14 +296,9 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({
               <input type="password" name="fake_admin_password_prevent" className="sr-only hidden" tabIndex={-1} autoComplete="new-password" aria-hidden="true" />
 
               <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <label htmlFor="admin-login-email" className="block text-xs font-semibold text-slate-700">
-                    Usuario Administrador
-                  </label>
-                  <span className="text-[10px] text-slate-500 font-medium">
-                    Guía: <span className="font-mono font-semibold text-indigo-600">serviciosyaparaguay@gmail.com</span>
-                  </span>
-                </div>
+                <label htmlFor="admin-login-email" className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  Usuario Administrador
+                </label>
                 <input
                   id="admin-login-email"
                   name="admin_portal_user_account"
@@ -314,21 +309,16 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({
                   data-lpignore="true"
                   data-form-type="other"
                   value={email}
-                  placeholder="ej: serviciosyaparaguay@gmail.com o admin"
+                  placeholder="Ingresá tu email o Usuario"
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-3.5 py-2.5 bg-slate-50 hover:bg-slate-100/80 focus:bg-white text-xs rounded-lg border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-hidden font-medium text-slate-900 transition-all placeholder:text-slate-400"
                 />
               </div>
 
               <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <label htmlFor="admin-login-password" className="block text-xs font-semibold text-slate-700">
-                    Contraseña
-                  </label>
-                  <span className="text-[10px] text-slate-500 font-medium">
-                    Guía: <span className="font-mono font-semibold text-indigo-600">Servi270985#</span>
-                  </span>
-                </div>
+                <label htmlFor="admin-login-password" className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  Contraseña
+                </label>
                 <div className="relative">
                   <input
                     id="admin-login-password"
